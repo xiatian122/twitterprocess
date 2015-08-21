@@ -31,7 +31,9 @@
 </li></ul>
 
 <h3>Cautions</h3>
-The network protocol applied in this project is SSH. Slave nodes will connect to the master node concurrently. 
+<ul><li>The network protocol applied in this project is SSH. Slave nodes will connect to the master node concurrently. 
 However, the default configuration of ssh only allows 10 concurrent connection. To modify this, set MaxSessions
-and MaxStartups in sshd_config file to be more than num of slave nodes. Further issues may refer to ssh or iptables firewall security settings.
+and MaxStartups in sshd_config file to be more than num of slave nodes. Further issues may refer to ssh or iptables firewall security settings.<br>
+</li><li> The rapidjson package may encounter kernel panic errors, when users mean to retrieve attributes that don't exist in the json format file. To avoid such errors, test if the attribute exists prior to code to crawl is essential but necessary. For example, if you want to retireve hashtags in a tweet like "d[entities][hashtags]", test if "entities -> hashtags" is validate in a sequential order.
+</li></ul>
 
