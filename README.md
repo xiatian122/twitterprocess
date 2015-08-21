@@ -31,9 +31,7 @@
 </li></ul>
 
 <h3>Cautions</h3>
-The network protocol applied in this project is SSH. Slave nodes will connect to the master node concurrently. <br>
-However, the default configuration of ssh only allows 10 concurrent connection. To modify this, set MaxSessions <br>
-and MaxStartups in sshd_config file to be larger than num of slave nodes. <br>
-<br>
-Further issues may refer to ssh or iptables firewall security settings.
+The network protocol applied in this project is SSH. Slave nodes will connect to the master node concurrently. 
+However, the default configuration of ssh only allows 10 concurrent connection. To modify this, set MaxSessions
+and MaxStartups in sshd_config file to be more than num of slave nodes. Further issues may refer to ssh or iptables firewall security settings.
 
